@@ -16,7 +16,7 @@ class Automata:
          self.favor_action_list=[]
 
     def decision(self):
-        self.action_last=np.random.choice(np.arange(1, r+1),1, self.probability_list)[0]
+        self.action_last=np.random.choice(np.arange(1, self.r+1), p=self.probability_list)
         self.action_selected_list.append(self.action_last)
         self.favor_action_list.append(self.cal_probablable_action())
         self.entropy_list.append(self.cal_entropy())
